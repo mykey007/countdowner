@@ -1,9 +1,23 @@
 /*app.css*/
-body {
-	background: #e7e7e7;
+html, body {
+    height: 100%;
 }
 
-.App {
+body {
+	background: #e7e7e7;
+	margin: 0;
+	padding: 0;
+}
+
+#root {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-end;
+	height: 100%;
+}
+
+.app {
 	max-width: 1300px;
 	padding: 20px 50px;
 	background: #f1f1f1;
