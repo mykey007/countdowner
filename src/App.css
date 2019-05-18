@@ -33,5 +33,10 @@ body {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
+	margin-bottom: 20px;
 }
 .time p {margin-right: 10px;}
+
+.app .deadline-update-input {
+	max-width: 66%;
+}

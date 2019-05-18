@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Clock from './clock';
+import { Box, Button, Field, Input, Title } from 'reactbulma/'
 import './app.css';
 class App extends Component {
 	constructor(props) {
@@ -17,20 +18,21 @@ class App extends Component {
 
 	render(){
 		return(
-			<section className="app">
-				<h1>Countdown to {this.state.deadline}</h1>
+			<Box className="app">
+				<Title>Countdown to {this.state.deadline}</Title>
 				<Clock 
 					deadline={this.state.deadline}
 				/>
-				<div>
-					<input 
+				<Field>
+					<Input 
+						className="deadline-update-input"
 						placeholder="new date" 
 						onChange={event => this.setState({newDeadline: event.target.value})}
 					/>
-					<button onClick={() => this.changeDeadline()}>Update</button>
+					<Button primary onClick={() => this.changeDeadline()}>Update</Button>
 					{ /* use anonymous function to prevent loops */ }
-				</div>
-			</section>
+				</Field>
+			</Box>
 		)
 	}
 }
