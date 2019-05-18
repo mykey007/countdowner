@@ -19,7 +19,9 @@ class App extends Component {
 		return(
 			<section className="app">
 				<h1>Countdown to {this.state.deadline}</h1>
-				<Clock />
+				<Clock 
+					deadline={this.state.deadline}
+				/>
 				<div>
 					<input 
 						placeholder="new date" 
